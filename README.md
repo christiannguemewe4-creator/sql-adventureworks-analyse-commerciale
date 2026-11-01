@@ -58,6 +58,21 @@ Le projet est construit comme une mission réelle : le **directeur commercial** 
 - **Anomalie en juin 2025** : 905 commandes pour seulement 47 492 de CA. C'est probablement un effet de fin de jeu de données, à vérifier avant d'en tirer une conclusion.
 - **Contrôle de cohérence** : le total des lignes de commande (`LineTotal`) correspond au sous-total de l'en-tête (`SubTotal`), et le CA cumulé (109,8 M) est identique au total de la segmentation clients.
 
+## Méthode et utilisation de l'IA
+
+J'ai utilisé **Claude** comme assistant de travail :
+- **Code** : aide à l'écriture des requêtes SQL et au débogage.
+- **Rédaction** : reformulation des conclusions pour un public non technique.
+- **Jeu de rôle « manager »** : Claude a joué le rôle d'un manager qui pose des questions business ; j'y ai répondu par l'analyse.
+
+**Vérification des résultats :**
+- contrôle de cohérence : le total des lignes de commande (`LineTotal`) correspond au sous-total de l'en-tête (`SubTotal`) ;
+- le CA cumulé (109,8 M) est identique au total de la segmentation clients ;
+- l'anomalie de juin 2025 est signalée plutôt qu'interprétée ;
+- relecture du code proposé par Claude, et correction quand il se trompait.
+
+L'analyse, l'interprétation des résultats et les recommandations finales sont les miennes.
+
 ## Compétences SQL mobilisées
 
 `SELECT`, `WHERE`, `GROUP BY`, `ORDER BY`, `LIMIT` · jointures (`JOIN`, `LEFT JOIN`, `USING`, `ON`) · sous-requêtes · CTE (`WITH`) · `CASE WHEN` · fonctions de fenêtrage (`RANK`, `LAG`, `SUM() OVER`) · fonctions de date · vues (`CREATE OR REPLACE VIEW`).
